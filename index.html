@@ -3,56 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COOL COOLER</title>
+  <title>COOL COOLER - Professional Edition</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #00d1ff;
+      background: linear-gradient(to right, #002244, #0055AA);
       color: #fff;
       text-align: center;
-      overflow: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .cooler-image {
-      width: 300px;
-      margin: 100px auto 20px;
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
     }
-    .banner {
-      position: absolute;
-      font-size: 24px;
+    .header {
+      font-size: 36px;
       font-weight: bold;
-      color: #ff007f;
-      animation: fly 5s infinite linear;
+      margin-bottom: 20px;
     }
-    @keyframes fly {
-      0% { transform: translate(-100vw, 0); }
-      100% { transform: translate(100vw, 100vh); }
+    .description {
+      font-size: 18px;
+      margin-bottom: 30px;
     }
-    .coolcooler-text {
-      font-size: 48px;
-      font-weight: bold;
+    .footer {
       margin-top: 50px;
+      font-size: 14px;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <img src="https://via.placeholder.com/300" alt="Cool Cooler" class="cooler-image">
-  <div class="coolcooler-text">$COOLCOOLER</div>
-
-  <script>
-    function createBanner() {
-      const banner = document.createElement('div');
-      banner.className = 'banner';
-      banner.innerText = 'COOL COOLER';
-      banner.style.top = `${Math.random() * 100}vh`;
-      banner.style.left = `${Math.random() * 100}vw`;
-      document.body.appendChild(banner);
-
-      setTimeout(() => banner.remove(), 5000);
-    }
-
-    setInterval(createBanner, 500);
-  </script>
+  <div class="container">
+    <div class="header">Welcome to COOL COOLER</div>
+    <img src="https://via.placeholder.com/400" alt="Cool Cooler" class="cooler-image">
+    <div class="description">
+      The coolest place to find the best coolers in the market. We provide top-tier cooling solutions for every need.
+    </div>
+    <div class="coolcooler-text" style="font-size: 24px; font-weight: bold;">$COOLCOOLER</div>
+  </div>
+  <div class="footer">&copy; 2025 COOL COOLER Inc. All rights reserved.</div>
 </body>
 </html>
