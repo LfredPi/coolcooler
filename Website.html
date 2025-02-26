@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COOL COOLER</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #00d1ff;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cooler-image {
+      width: 300px;
+      margin: 100px auto 20px;
+    }
+    .banner {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff007f;
+      animation: fly 5s infinite linear;
+    }
+    @keyframes fly {
+      0% { transform: translate(-100vw, 0); }
+      100% { transform: translate(100vw, 100vh); }
+    }
+    .coolcooler-text {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://via.placeholder.com/300" alt="Cool Cooler" class="cooler-image">
+  <div class="coolcooler-text">$COOLCOOLER</div>
+
+  <script>
+    function createBanner() {
+      const banner = document.createElement('div');
+      banner.className = 'banner';
+      banner.innerText = 'COOL COOLER';
+      banner.style.top = `${Math.random() * 100}vh`;
+      banner.style.left = `${Math.random() * 100}vw`;
+      document.body.appendChild(banner);
+
+      setTimeout(() => banner.remove(), 5000);
+    }
+
+    setInterval(createBanner, 500);
+  </script>
+</body>
+</html>
