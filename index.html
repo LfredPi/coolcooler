@@ -41,6 +41,30 @@
       font-size: 14px;
       opacity: 0.7;
     }
+    .floating-image {
+  position: absolute;
+  width: 50px;
+  opacity: 0.8;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 50px);
+  }
+  50% {
+    transform: translate(-50px, 100px);
+  }
+  75% {
+    transform: translate(-100px, -50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
   </style>
 </head>
 <body>
@@ -53,5 +77,20 @@
     <div class="coolcooler-text" style="font-size: 24px; font-weight: bold;">$COOLCOOLER</div>
   </div>
   <div class="footer">&copy; 2025 COOL COOLER Inc. All rights reserved.</div>
+  <script>
+  const numImages = 10; // Number of floating images
+  const imageUrl = "https://raw.githubusercontent.com/yourusername/coolcooler/main/floating-image.png"; // Your floating image URL
+
+  for (let i = 0; i < numImages; i++) {
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.className = 'floating-image';
+    img.style.top = Math.random() * window.innerHeight + 'px';
+    img.style.left = Math.random() * window.innerWidth + 'px';
+    document.body.appendChild(img);
+  }
+</script>
+
 </body>
+  
 </html>
