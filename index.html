@@ -92,15 +92,28 @@
   </div>
   <div class="footer">&copy; 2025 COOL COOLER Inc. All rights reserved.</div>
   <script>
-  const numImages = 30; // Number of floating images
-  const imageUrl = "https://github.com/LfredPi/coolcooler/blob/main/image-removebg-preview.png?raw=true"; // Your floating image URL
+<script>
+  const numImages = 10; // Number of floating images
+  const imageUrl = "https://raw.githubusercontent.com/yourusername/coolcooler/main/floating-image.png"; // Your floating image URL
 
   for (let i = 0; i < numImages; i++) {
     const img = document.createElement('img');
     img.src = imageUrl;
     img.className = 'floating-image';
+
+    // Random position
     img.style.top = Math.random() * window.innerHeight + 'px';
     img.style.left = Math.random() * window.innerWidth + 'px';
+
+    // Random animation duration and delay
+    const floatDuration = (8 + Math.random() * 5) + 's'; // Between 8s and 13s
+    const driftDuration = (12 + Math.random() * 5) + 's'; // Between 12s and 17s
+    const delay = Math.random() * 5 + 's'; // Up to 5s delay
+
+    img.style.animation = `float ${floatDuration} ease-in-out infinite alternate,
+                           drift ${driftDuration} ease-in-out infinite alternate`;
+    img.style.animationDelay = delay;
+
     document.body.appendChild(img);
   }
 </script>
